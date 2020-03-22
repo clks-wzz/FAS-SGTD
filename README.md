@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Main code of [**CVPR2020 paper "Deep Spatial Gradient and Temporal Depth Learning for Face Anti-spoofing"**  ](https://arxiv.org/abs/2003.08061)
+Main codes of [**CVPR2020 paper "Deep Spatial Gradient and Temporal Depth Learning for Face Anti-spoofing"**  ](https://arxiv.org/abs/2003.08061)
 
 ## Prerequisite
 
