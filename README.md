@@ -20,6 +20,8 @@ Main code of [**CVPR2020 paper "Deep Spatial Gradient and Temporal Depth Learnin
 
 ## Train
 
+You can use [PRNet](https://github.com/clks-wzz/PRNet-Depth-Generation) to generate the virtual depth maps.
+
 For single-frame stage:
 > cd fas_sgtd_single_frame && bash train.sh
 
