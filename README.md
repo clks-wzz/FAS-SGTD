@@ -30,7 +30,7 @@ For multi-frame stage:
 
 ## Test
 
-We provide an example model trained for OULU-NPU Protocol 1. You can download the model at [BaiduDrive](https://pan.baidu.com/s/1sVdctfWDoUFsrXOjxr6wJw)(pwd: luik) and put them into `fas_sgtd_multi_frame/model_save/`.
+We provide an example for Protocol 1 of OULU-NPU. You can download the models at [BaiduDrive](https://pan.baidu.com/s/1sVdctfWDoUFsrXOjxr6wJw)(pwd: luik) and put them into `fas_sgtd_multi_frame/model_save/`.
 
 > cd fas_sgtd_multi_frame && bash test.sh
 
