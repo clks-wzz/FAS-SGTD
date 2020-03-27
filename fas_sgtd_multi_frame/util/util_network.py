@@ -114,8 +114,6 @@ def Conv2d_cd(input, filters, kernel_size=3, strides=1,
     kernel_diff = tf.reduce_sum(_filter, axis=0, keep_dims=True)
     kernel_diff = tf.reduce_sum(kernel_diff, axis=1, keep_dims=True)
     print(name_scope + '/kernel_diff.shape:', kernel_diff.get_shape())
-    kernel_diff = tf.tile(kernel_diff, [kernel_size, kernel_size, 1, 1])
-    print(name_scope + '/kernel_diff.shape:', kernel_diff.get_shape())
     out_diff = tf.nn.conv2d(input, kernel_diff, strides=[1, strides, strides, 1], padding=padding, name=name_scope + '/diff')
 
     return out_normal - theta * out_diff
