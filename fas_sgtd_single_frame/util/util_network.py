@@ -1,5 +1,6 @@
 import tensorflow as tf 
 import numpy as np 
+import math
 import tensorflow.contrib.slim as slim
 
 def GroupNorm(inputs, is_training=False, activation_fn=None, scope=None, G=16, esp=1e-5):
@@ -97,7 +98,6 @@ def residual_gradient_conv(input, out_dim, is_training, name, gradient_type='typ
 def Conv2d_cd(input, filters, kernel_size=3, strides=1,
               padding='SAME', theta=0.7, use_bias=False,
               kernel_initializer=tf.variance_scaling_initializer(scale=2.0),
-
               name='conv2d_cd'):
     out_channels = filters
     name_scope = name
@@ -121,7 +121,7 @@ def Conv2d_cd(input, filters, kernel_size=3, strides=1,
 
 
 def CDCN_BLOCK(input, out_channels, kernel_size=3, is_training=False, name='conv2d_cd'):
-    cdcn_out = Conv2d_cd(input, out_channels, kernel_size=kernel_size, name_scope=name)
+    cdcn_out = Conv2d_cd(input, out_channels, kernel_size=kernel_size, name=name)
     net = slim.batch_norm(cdcn_out, is_training=is_training, activation_fn=None, scope= name + '/bn')
     net = tf.nn.relu(net)
     return net
