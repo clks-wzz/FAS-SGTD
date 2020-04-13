@@ -37,7 +37,7 @@ def Contrast_and_Brightness(img, alpha=None, gamma=None):
     return dst
 
 def get_cut_out(img, y, x, length_new, length=50):
-    h, w = img.shape[1], img.shape[2]    # Tensor [1][2],  nparray [0][1]
+    h, w = img.shape[0], img.shape[1]    # Tensor [1][2],  nparray [0][1]
     mask = np.ones((h, w), np.float32)
     #y = np.random.randint(h)
     #x = np.random.randint(w)
